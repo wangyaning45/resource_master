@@ -1,0 +1,1 @@
+<view class="content"><image class="logo" src="/static/logo.png"></image><view class="text-area"><text class="title">{{title}}</text></view><view><button data-event-opts="{{[['tap',[['openWeb']]]]}}" bindtap="__e">open uni</button></view><view><button data-event-opts="{{[['tap',[['launchApp']]]]}}" bindtap="__e">launch browser</button></view></view>
