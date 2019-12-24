@@ -1,7 +1,7 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],[
 /* 0 */
 /*!************************************!*\
-  !*** D:/uni-proj/resource/main.js ***!
+  !*** E:/G/resource_master/main.js ***!
   \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -44,7 +44,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 /***/ }),
 /* 4 */
 /*!***************************************!*\
-  !*** D:/uni-proj/resource/pages.json ***!
+  !*** E:/G/resource_master/pages.json ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -82,7 +82,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ }),
 /* 12 */
 /*!*********************************************************************!*\
-  !*** D:/uni-proj/resource/main.js?{"page":"pages%2Findex%2Findex"} ***!
+  !*** E:/G/resource_master/main.js?{"page":"pages%2Findex%2Findex"} ***!
   \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

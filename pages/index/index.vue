@@ -21,12 +21,12 @@
 				<view v-for="(item,index) in hList" :key="index" @click="keywordsClick(item)">{{item}}</view>
 			</view>
 		</view>
-		<view :class="'wanted-' + theme" v-if="showWant">
+		<!-- <view :class="'wanted-' + theme" v-if="showWant">
 			<view class="header">猜你想搜的</view>
 			<view class="list">
 				<view v-for="(item,index) in hotList" :key="index" @click="keywordsClick(item)">{{item}}</view>
 			</view>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -69,7 +69,7 @@
 				var tmp_url = _this.searchText
 				if(tmp_url.indexOf('http') != 0)
 					tmp_url = 'https://' + tmp_url;
-				if(tmp_url.indexOf('.com') == -1)
+				if(tmp_url.indexOf('.') == -1)
 					tmp_url = tmp_url + '.com';
 				plus.runtime.openWeb(tmp_url, function(res){console.log(res);});
 				

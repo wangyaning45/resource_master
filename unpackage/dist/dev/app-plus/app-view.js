@@ -1061,10 +1061,10 @@ function gz$gwx_1(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_1)return __WXML_GLOBAL__.ops_cached.$gwx_1
 __WXML_GLOBAL__.ops_cached.$gwx_1=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'data-v-64719880'])
-Z([3,'search data-v-64719880'])
+Z([3,'data-v-3052acfa'])
+Z([3,'search data-v-3052acfa'])
 Z([3,'__e'])
-Z([3,'voice-icon data-v-64719880'])
+Z([3,'voice-icon data-v-3052acfa'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[1,'startRecognize']]]]]]]]])
 Z([3,'aspectFit'])
 Z([3,'../../static/zy-search/voice.svg'])
@@ -1090,20 +1090,20 @@ Z(z[15])
 Z(z[16])
 Z(z[17])
 Z(z[2])
-Z([3,'search-icon data-v-64719880'])
+Z([3,'search-icon data-v-3052acfa'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[1,'searchStart']]]]]]]]])
 Z(z[5])
 Z([3,'../../static/zy-search/search.svg'])
 Z([[2,'>'],[[6],[[7],[3,'hList']],[3,'length']],[1,0]])
-Z([[4],[[5],[[5],[1,'data-v-64719880']],[[2,'+'],[1,'s-'],[[7],[3,'theme']]]]])
-Z([3,'header data-v-64719880'])
+Z([[4],[[5],[[5],[1,'data-v-3052acfa']],[[2,'+'],[1,'s-'],[[7],[3,'theme']]]]])
+Z([3,'header data-v-3052acfa'])
 Z([3,'历史记录'])
 Z(z[2])
 Z(z[0])
 Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[1,'delhistory']],[[4],[[5],[1,'$event']]]]]]]]]]])
 Z(z[5])
 Z([3,'../../static/zy-search/delete.svg'])
-Z([3,'list data-v-64719880'])
+Z([3,'list data-v-3052acfa'])
 Z([3,'index'])
 Z([3,'item'])
 Z([[7],[3,'hList']])
@@ -1112,19 +1112,6 @@ Z(z[2])
 Z(z[0])
 Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[[5],[1,'keywordsClick']],[[4],[[5],[1,'$0']]]],[[4],[[5],[[4],[[5],[[4],[[5],[[5],[[5],[1,'hList']],[1,'']],[[7],[3,'index']]]]]]]]]]]]]]]])
 Z([a,[[7],[3,'item']]])
-Z([[7],[3,'showWant']])
-Z([[4],[[5],[[5],[1,'data-v-64719880']],[[2,'+'],[1,'wanted-'],[[7],[3,'theme']]]]])
-Z(z[35])
-Z([3,'猜你想搜的'])
-Z(z[42])
-Z(z[43])
-Z(z[44])
-Z([[7],[3,'hotList']])
-Z(z[43])
-Z(z[2])
-Z(z[0])
-Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[[5],[1,'keywordsClick']],[[4],[[5],[1,'$0']]]],[[4],[[5],[[4],[[5],[[4],[[5],[[5],[[5],[1,'hotList']],[1,'']],[[7],[3,'index']]]]]]]]]]]]]]]])
-Z([a,z[50][1]])
 })(__WXML_GLOBAL__.ops_cached.$gwx_1);return __WXML_GLOBAL__.ops_cached.$gwx_1
 }
 __WXML_GLOBAL__.ops_set.$gwx=z;
@@ -1136,80 +1123,53 @@ var m0=function(e,s,r,gg){
 var z=gz$gwx_1()
 var oB=_n('view')
 _rz(z,oB,'class',0,e,s,gg)
-var fE=_n('view')
-_rz(z,fE,'class',1,e,s,gg)
-var hG=_mz(z,'image',['bindtap',2,'class',1,'data-event-opts',2,'mode',3,'src',4],[],e,s,gg)
+var oD=_n('view')
+_rz(z,oD,'class',1,e,s,gg)
+var cF=_mz(z,'image',['bindtap',2,'class',1,'data-event-opts',2,'mode',3,'src',4],[],e,s,gg)
+_(oD,cF)
+var fE=_v()
+_(oD,fE)
+if(_oz(z,7,e,s,gg)){fE.wxVkey=1
+var hG=_mz(z,'input',['focus',-1,'bindblur',8,'bindconfirm',1,'bindinput',2,'class',3,'confirmType',4,'data-event-opts',5,'maxlength',6,'placeholder',7,'type',8,'value',9],[],e,s,gg)
 _(fE,hG)
-var cF=_v()
-_(fE,cF)
-if(_oz(z,7,e,s,gg)){cF.wxVkey=1
-var oH=_mz(z,'input',['focus',-1,'bindblur',8,'bindconfirm',1,'bindinput',2,'class',3,'confirmType',4,'data-event-opts',5,'maxlength',6,'placeholder',7,'type',8,'value',9],[],e,s,gg)
-_(cF,oH)
 }
-else{cF.wxVkey=2
-var cI=_mz(z,'input',['bindblur',18,'bindconfirm',1,'bindinput',2,'class',3,'confirmType',4,'data-event-opts',5,'maxlength',6,'placeholder',7,'type',8,'value',9],[],e,s,gg)
-_(cF,cI)
+else{fE.wxVkey=2
+var oH=_mz(z,'input',['bindblur',18,'bindconfirm',1,'bindinput',2,'class',3,'confirmType',4,'data-event-opts',5,'maxlength',6,'placeholder',7,'type',8,'value',9],[],e,s,gg)
+_(fE,oH)
 }
-var oJ=_mz(z,'image',['bindtap',28,'class',1,'data-event-opts',2,'mode',3,'src',4],[],e,s,gg)
-_(fE,oJ)
-cF.wxXCkey=1
-_(oB,fE)
+var cI=_mz(z,'image',['bindtap',28,'class',1,'data-event-opts',2,'mode',3,'src',4],[],e,s,gg)
+_(oD,cI)
+fE.wxXCkey=1
+_(oB,oD)
 var xC=_v()
 _(oB,xC)
 if(_oz(z,33,e,s,gg)){xC.wxVkey=1
+var oJ=_n('view')
+_rz(z,oJ,'class',34,e,s,gg)
 var lK=_n('view')
-_rz(z,lK,'class',34,e,s,gg)
-var aL=_n('view')
-_rz(z,aL,'class',35,e,s,gg)
-var tM=_oz(z,36,e,s,gg)
-_(aL,tM)
-var eN=_mz(z,'image',['bindtap',37,'class',1,'data-event-opts',2,'mode',3,'src',4],[],e,s,gg)
-_(aL,eN)
+_rz(z,lK,'class',35,e,s,gg)
+var aL=_oz(z,36,e,s,gg)
 _(lK,aL)
-var bO=_n('view')
-_rz(z,bO,'class',42,e,s,gg)
-var oP=_v()
-_(bO,oP)
-var xQ=function(fS,oR,cT,gg){
-var oV=_mz(z,'view',['bindtap',47,'class',1,'data-event-opts',2],[],fS,oR,gg)
-var cW=_oz(z,50,fS,oR,gg)
-_(oV,cW)
-_(cT,oV)
-return cT
+var tM=_mz(z,'image',['bindtap',37,'class',1,'data-event-opts',2,'mode',3,'src',4],[],e,s,gg)
+_(lK,tM)
+_(oJ,lK)
+var eN=_n('view')
+_rz(z,eN,'class',42,e,s,gg)
+var bO=_v()
+_(eN,bO)
+var oP=function(oR,xQ,fS,gg){
+var hU=_mz(z,'view',['bindtap',47,'class',1,'data-event-opts',2],[],oR,xQ,gg)
+var oV=_oz(z,50,oR,xQ,gg)
+_(hU,oV)
+_(fS,hU)
+return fS
 }
-oP.wxXCkey=2
-_2z(z,45,xQ,e,s,gg,oP,'item','index','index')
-_(lK,bO)
-_(xC,lK)
-}
-var oD=_v()
-_(oB,oD)
-if(_oz(z,51,e,s,gg)){oD.wxVkey=1
-var oX=_n('view')
-_rz(z,oX,'class',52,e,s,gg)
-var lY=_n('view')
-_rz(z,lY,'class',53,e,s,gg)
-var aZ=_oz(z,54,e,s,gg)
-_(lY,aZ)
-_(oX,lY)
-var t1=_n('view')
-_rz(z,t1,'class',55,e,s,gg)
-var e2=_v()
-_(t1,e2)
-var b3=function(x5,o4,o6,gg){
-var c8=_mz(z,'view',['bindtap',60,'class',1,'data-event-opts',2],[],x5,o4,gg)
-var h9=_oz(z,63,x5,o4,gg)
-_(c8,h9)
-_(o6,c8)
-return o6
-}
-e2.wxXCkey=2
-_2z(z,58,b3,e,s,gg,e2,'item','index','index')
-_(oX,t1)
-_(oD,oX)
+bO.wxXCkey=2
+_2z(z,45,oP,e,s,gg,bO,'item','index','index')
+_(oJ,eN)
+_(xC,oJ)
 }
 xC.wxXCkey=1
-oD.wxXCkey=1
 _(r,oB)
 return r
 }
@@ -1338,7 +1298,7 @@ setCssToHead([])();setCssToHead([[2,0]],undefined,{path:"./app.wxss"})();
 __wxAppCode__['app.wxss']=setCssToHead([[2,0]],undefined,{path:"./app.wxss"});    
 __wxAppCode__['app.wxml']=$gwx('./app.wxml');
 
-__wxAppCode__['pages/index/index.wxss']=setCssToHead([".",[1],"search.",[1],"data-v-64719880 { width: ",[0,640],"; margin: ",[0,30]," auto 0; position: relative; }\n.",[1],"search wx-input.",[1],"data-v-64719880 { background-color: #F7F7F7; padding: ",[0,10]," ",[0,74],"; font-size: ",[0,28],"; border-radius: ",[0,50],"; }\n.",[1],"search .",[1],"voice-icon.",[1],"data-v-64719880 { width: ",[0,36],"; height: ",[0,36],"; padding: ",[0,16]," ",[0,20]," ",[0,16]," 0; position: absolute; left: ",[0,16],"; top: ",[0,4],"; z-index: 10; }\n.",[1],"search .",[1],"search-icon.",[1],"data-v-64719880 { width: ",[0,36],"; height: ",[0,36],"; padding: ",[0,16]," ",[0,20]," ",[0,16]," 0; position: absolute; right: 0; top: ",[0,-2],"; z-index: 10; }\n.",[1],"s-block.",[1],"data-v-64719880 { margin-top: ",[0,30],"; }\n.",[1],"s-block .",[1],"header.",[1],"data-v-64719880 { font-size: ",[0,32],"; padding: ",[0,30],"; position: relative; }\n.",[1],"s-block .",[1],"header wx-image.",[1],"data-v-64719880 { width: ",[0,36],"; height: ",[0,36],"; padding: ",[0,10],"; position: absolute; right: ",[0,40],"; top: ",[0,24],"; }\n.",[1],"s-block .",[1],"list.",[1],"data-v-64719880 { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }\n.",[1],"s-block .",[1],"list wx-view.",[1],"data-v-64719880 { width: 50%; color: #8A8A8A; font-size: ",[0,28],"; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; padding: ",[0,20]," 0; border-top: ",[0,2]," solid #FFF; border-left: ",[0,2]," solid #FFF; overflow: hidden; white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis; background-color: #F7F7F7; }\n.",[1],"s-circle.",[1],"data-v-64719880 { margin-top: ",[0,30],"; }\n.",[1],"s-circle .",[1],"header.",[1],"data-v-64719880 { font-size: ",[0,32],"; padding: ",[0,30],"; border-bottom: ",[0,2]," solid #F9F9F9; position: relative; }\n.",[1],"s-circle .",[1],"header wx-image.",[1],"data-v-64719880 { width: ",[0,36],"; height: ",[0,36],"; padding: ",[0,10],"; position: absolute; right: ",[0,40],"; top: ",[0,24],"; }\n.",[1],"s-circle .",[1],"list.",[1],"data-v-64719880 { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 0 ",[0,30]," ",[0,20],"; }\n.",[1],"s-circle .",[1],"list wx-view.",[1],"data-v-64719880 { padding: ",[0,8]," ",[0,30],"; margin: ",[0,20]," ",[0,30]," 0 0; font-size: ",[0,28],"; color: #8A8A8A; background-color: #F7F7F7; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; border-radius: ",[0,20],"; }\n.",[1],"wanted-block.",[1],"data-v-64719880 { margin-top: ",[0,30],"; }\n.",[1],"wanted-block .",[1],"header.",[1],"data-v-64719880 { font-size: ",[0,32],"; padding: ",[0,30],"; }\n.",[1],"wanted-block .",[1],"list.",[1],"data-v-64719880 { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }\n.",[1],"wanted-block .",[1],"list wx-view.",[1],"data-v-64719880 { width: 50%; color: #8A8A8A; font-size: ",[0,28],"; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; padding: ",[0,20]," 0; border-top: ",[0,2]," solid #FFF; border-left: ",[0,2]," solid #FFF; background-color: #F7F7F7; overflow: hidden; white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis; }\n.",[1],"wanted-circle.",[1],"data-v-64719880 { margin-top: ",[0,30],"; }\n.",[1],"wanted-circle .",[1],"header.",[1],"data-v-64719880 { font-size: ",[0,32],"; padding: ",[0,30],"; }\n.",[1],"wanted-circle .",[1],"list.",[1],"data-v-64719880 { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 0 ",[0,30]," ",[0,20],"; }\n.",[1],"wanted-circle .",[1],"list wx-view.",[1],"data-v-64719880 { padding: ",[0,8]," ",[0,30],"; margin: ",[0,20]," ",[0,30]," 0 0; font-size: ",[0,28],"; color: #8A8A8A; background-color: #F7F7F7; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; border-radius: ",[0,20],"; }\n",],undefined,{path:"./pages/index/index.wxss"});    
+__wxAppCode__['pages/index/index.wxss']=setCssToHead([".",[1],"search.",[1],"data-v-3052acfa { width: ",[0,640],"; margin: ",[0,30]," auto 0; position: relative; }\n.",[1],"search wx-input.",[1],"data-v-3052acfa { background-color: #F7F7F7; padding: ",[0,10]," ",[0,74],"; font-size: ",[0,28],"; border-radius: ",[0,50],"; }\n.",[1],"search .",[1],"voice-icon.",[1],"data-v-3052acfa { width: ",[0,36],"; height: ",[0,36],"; padding: ",[0,16]," ",[0,20]," ",[0,16]," 0; position: absolute; left: ",[0,16],"; top: ",[0,4],"; z-index: 10; }\n.",[1],"search .",[1],"search-icon.",[1],"data-v-3052acfa { width: ",[0,36],"; height: ",[0,36],"; padding: ",[0,16]," ",[0,20]," ",[0,16]," 0; position: absolute; right: 0; top: ",[0,-2],"; z-index: 10; }\n.",[1],"s-block.",[1],"data-v-3052acfa { margin-top: ",[0,30],"; }\n.",[1],"s-block .",[1],"header.",[1],"data-v-3052acfa { font-size: ",[0,32],"; padding: ",[0,30],"; position: relative; }\n.",[1],"s-block .",[1],"header wx-image.",[1],"data-v-3052acfa { width: ",[0,36],"; height: ",[0,36],"; padding: ",[0,10],"; position: absolute; right: ",[0,40],"; top: ",[0,24],"; }\n.",[1],"s-block .",[1],"list.",[1],"data-v-3052acfa { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }\n.",[1],"s-block .",[1],"list wx-view.",[1],"data-v-3052acfa { width: 50%; color: #8A8A8A; font-size: ",[0,28],"; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; padding: ",[0,20]," 0; border-top: ",[0,2]," solid #FFF; border-left: ",[0,2]," solid #FFF; overflow: hidden; white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis; background-color: #F7F7F7; }\n.",[1],"s-circle.",[1],"data-v-3052acfa { margin-top: ",[0,30],"; }\n.",[1],"s-circle .",[1],"header.",[1],"data-v-3052acfa { font-size: ",[0,32],"; padding: ",[0,30],"; border-bottom: ",[0,2]," solid #F9F9F9; position: relative; }\n.",[1],"s-circle .",[1],"header wx-image.",[1],"data-v-3052acfa { width: ",[0,36],"; height: ",[0,36],"; padding: ",[0,10],"; position: absolute; right: ",[0,40],"; top: ",[0,24],"; }\n.",[1],"s-circle .",[1],"list.",[1],"data-v-3052acfa { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 0 ",[0,30]," ",[0,20],"; }\n.",[1],"s-circle .",[1],"list wx-view.",[1],"data-v-3052acfa { padding: ",[0,8]," ",[0,30],"; margin: ",[0,20]," ",[0,30]," 0 0; font-size: ",[0,28],"; color: #8A8A8A; background-color: #F7F7F7; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; border-radius: ",[0,20],"; }\n.",[1],"wanted-block.",[1],"data-v-3052acfa { margin-top: ",[0,30],"; }\n.",[1],"wanted-block .",[1],"header.",[1],"data-v-3052acfa { font-size: ",[0,32],"; padding: ",[0,30],"; }\n.",[1],"wanted-block .",[1],"list.",[1],"data-v-3052acfa { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }\n.",[1],"wanted-block .",[1],"list wx-view.",[1],"data-v-3052acfa { width: 50%; color: #8A8A8A; font-size: ",[0,28],"; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; padding: ",[0,20]," 0; border-top: ",[0,2]," solid #FFF; border-left: ",[0,2]," solid #FFF; background-color: #F7F7F7; overflow: hidden; white-space: nowrap; -o-text-overflow: ellipsis; text-overflow: ellipsis; }\n.",[1],"wanted-circle.",[1],"data-v-3052acfa { margin-top: ",[0,30],"; }\n.",[1],"wanted-circle .",[1],"header.",[1],"data-v-3052acfa { font-size: ",[0,32],"; padding: ",[0,30],"; }\n.",[1],"wanted-circle .",[1],"list.",[1],"data-v-3052acfa { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 0 ",[0,30]," ",[0,20],"; }\n.",[1],"wanted-circle .",[1],"list wx-view.",[1],"data-v-3052acfa { padding: ",[0,8]," ",[0,30],"; margin: ",[0,20]," ",[0,30]," 0 0; font-size: ",[0,28],"; color: #8A8A8A; background-color: #F7F7F7; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; border-radius: ",[0,20],"; }\n",],undefined,{path:"./pages/index/index.wxss"});    
 __wxAppCode__['pages/index/index.wxml']=$gwx('./pages/index/index.wxml');
 
 ;var __pageFrameEndTime__ = Date.now();
