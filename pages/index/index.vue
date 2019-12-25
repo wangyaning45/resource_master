@@ -12,6 +12,7 @@
 			</template>
 			<image src="../../static/zy-search/search.svg" mode="aspectFit" @click="searchStart()" class="search-icon"></image>
 		</view>
+		
 		<view :class="'s-' + theme" v-if="hList.length > 0">
 			<view class="header">
 				历史记录
@@ -21,12 +22,6 @@
 				<view v-for="(item,index) in hList" :key="index" @click="keywordsClick(item)">{{item}}</view>
 			</view>
 		</view>
-		<!-- <view :class="'wanted-' + theme" v-if="showWant">
-			<view class="header">猜你想搜的</view>
-			<view class="list">
-				<view v-for="(item,index) in hotList" :key="index" @click="keywordsClick(item)">{{item}}</view>
-			</view>
-		</view> -->
 	</view>
 </template>
 
@@ -59,14 +54,31 @@
 		},
 		data() {
 			return {
+				receiveDataList: [],
 				searchText:'',								//搜索关键词
 				hList:uni.getStorageSync('search_cache')		//历史记录
 			};
 		},
 		methods: {
-			searchStart: function() {	//触发搜索
+			searchStart: function(res_log) {	//触发搜索
+			
+				var requestTask = uni.request({
+					url: 'http://www.resourcemaster.top/resource',
+					method:'POST',
+					data:  {
+						name: '{{this.searchText}}',
+					},
+					success: (succ_res) => {
+						var parseData = succ_res.data;
+						this.sitename = parseData.sitenames;
+						this.urls = parseData.urls;
+					}
+				});
+				
+				
+			
 				let _this = this;
-				var tmp_url = _this.searchText
+				var tmp_url = _this.searchText;
 				if(tmp_url.indexOf('http') != 0)
 					tmp_url = 'https://' + tmp_url;
 				if(tmp_url.indexOf('.') == -1)
@@ -119,10 +131,8 @@
 						}
 					})
 				}
-				// if(_this.searchText.indexOf('http') != 0)
-				// 	_this.searchText = 'https://' + _this.searchText;
-				// plus.runtime.openWeb(_this.searchText, function(res){console.log(res);});
 				_this.searchText = '';
+				console.log(res_log);
 			},
 			keywordsClick (item) {	//推荐搜索
 				this.searchText = item;
