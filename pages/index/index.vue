@@ -5,28 +5,29 @@
 				<image src="../../static/zy-search/voice.svg" mode="aspectFit" @click="startRecognize()" class="voice-icon"></image>
 			<!-- #endif -->
 			<template v-if="isFocus">
-				<input maxlength="20" focus type="text" value="" confirm-type="search" @confirm="searchStart()" placeholder="输入网址" v-model.trim="searchText"/>
+				<input maxlength="20" focus type="text" value="" confirm-type="search" @confirm="getname_link()" placeholder="输入关键字" v-model.trim="searchText"/>
 			</template>
 			<template v-else>
-				<input maxlength="20" type="text" value="" confirm-type="search" @confirm="searchStart()" placeholder="输入网址" v-model.trim="searchText"/>
+				<input maxlength="20" type="text" value="" confirm-type="search" @confirm="getname_link()" placeholder="输入关键字" v-model.trim="searchText"/>
 			</template>
-			<image src="../../static/zy-search/search.svg" mode="aspectFit" @click="searchStart()" class="search-icon"></image>
+			<image src="../../static/zy-search/search.svg" mode="aspectFit" @click="getname_link()" class="search-icon"></image>
 		</view>
 		
-		<view :class="'s-' + theme" v-if="hList.length > 0">
+		<view :class="'s-' + theme" v-if="Object.keys(parseData).length>0">
 			<view class="header">
-				历史记录
-				<image src="../../static/zy-search/delete.svg" mode="aspectFit" @click="delhistory"></image>
+				搜索结果
 			</view>
 			<view class="list">
-				<view v-for="(item,index) in hList" :key="index" @click="keywordsClick(item)">{{item}}</view>
+				<view  v-for="(link,name) in parseData" :key="name" @click="jump_link(name)">{{name}}</view>
 			</view>
 		</view>
+		
 	</view>
 </template>
 
 <script>
 	export default{
+		//inject: ['reload'],
 		name:"zy-search",
 		props:{
 			isFocus:{	//是否自动获取焦点
@@ -52,98 +53,58 @@
 				default: 'baidu'
 			}
 		},
+		
 		data() {
 			return {
-				receiveDataList: [],
-				searchText:'',								//搜索关键词
-				hList:uni.getStorageSync('search_cache')		//历史记录
+				parseData:{}, 
+				sitename:[],
+				urls:[],
+				searchText:'',	
 			};
 		},
 		methods: {
-			searchStart: function(res_log) {	//触发搜索
-			
+			getname_link: function(res_log) { //触发搜索		
+			if (this.searchText == '') {
+				uni.showToast({
+					title: '请输入关键字',
+					icon: 'none',
+					duration: 1000
+				     });
+					 return;
+			}
 				var requestTask = uni.request({
 					url: 'http://www.resourcemaster.top/resource',
 					method:'POST',
 					data:  {
-						name: '{{this.searchText}}',
+						name: this.searchText
+						
+					},
+					header: {
+						 'content-type':'application/x-www-form-urlencoded'
 					},
 					success: (succ_res) => {
 						var parseData = succ_res.data;
 						this.sitename = parseData.sitenames;
 						this.urls = parseData.urls;
-					}
-				});
-				
-				
-			
-				let _this = this;
-				var tmp_url = _this.searchText;
-				if(tmp_url.indexOf('http') != 0)
-					tmp_url = 'https://' + tmp_url;
-				if(tmp_url.indexOf('.') == -1)
-					tmp_url = tmp_url + '.com';
-				plus.runtime.openWeb(tmp_url, function(res){console.log(res);});
-				
-				if (_this.searchText == '') {
-					uni.showToast({
-						title: '请输入关键字',
-						icon: 'none',
-						duration: 1000
-					});
-				}else{
-					uni.getStorage({
-						key:'search_cache',
-						success(res){
-							let list = res.data;
-							if(list.length > 5){
-								for(let item of list){
-									if(item == _this.searchText){
-										_this.$emit('getSearchText', _this.searchText);
-										return;
-									}
-								}
-								list.pop();
-								list.unshift(_this.searchText);
-							}else{
-								for(let item of list){
-									if(item == _this.searchText){
-										return;
-									}
-								}
-								list.unshift(_this.searchText);
-							}
-							_this.hList = list;
-							uni.setStorage({
-								key: 'search_cache',
-								data: _this.hList
-							});
-							_this.$emit('getSearchText', _this.searchText);
-						},
-						fail() {
-							_this.hList = [];
-							_this.hList.push(_this.searchText);
-							uni.setStorage({
-								key: 'search_cache',
-								data: _this.hList
-							});
-							_this.$emit('getSearchText', _this.searchText);
-						}
-					})
-				}
-				_this.searchText = '';
-				console.log(res_log);
+						this.parseData={};
+						//this.reload();
+						//location.reload();
+						/*this.$router.replace({
+							path:'/pages/black/black',
+							name:'black'
+							
+						})*/
+						for(var i=0;i<this.sitename.length;i++)
+						{
+							this.parseData[this.sitename[i]]=this.urls[i];
+						}	
+					}				
+				});	
 			},
-			keywordsClick (item) {	//推荐搜索
-				this.searchText = item;
-				this.searchStart();
-			},
-			delhistory () {		//清空历史记录
-				this.hList = [];
-				uni.setStorage({
-					key: 'search_cache',
-					data: []
-				});
+			jump_link (item) {	
+				var url=this.parseData[item];
+				plus.runtime.openWeb(url, function(res){console.log(res);});
+				
 			},
 			startRecognize: function() {	//语音输入
 				let _this = this;
